@@ -34,4 +34,25 @@ public class Board {
             System.out.print("\n");
         }
     }
+
+    public int getRow() {
+        return this.col;
+    }
+
+    public int getCol() {
+        return this.col;
+    }
+
+    public boolean getCell(int x, int y) {
+        return this.aliveCells[y][x];
+    }
+
+    public void setCell(int x, int y, boolean status) {
+        this.aliveCells[y][x] = status;
+    }
+
+    public void toggleCell(int x, int y) {
+        this.setCell(x, y, !this.getCell(x, y));
+    }
+
 }
