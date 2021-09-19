@@ -24,6 +24,7 @@ public class Main {
 
             if (x >= 0 && x < gameBoard.getCol() && y >= 0 && y < gameBoard.getRow()) {
                 gameBoard.toggleCell(x, y);
+                System.out.println(gameBoard.getLifeNeighborCount(x, y));
                 gameBoard.print();
             }
         }
@@ -33,6 +34,7 @@ public class Main {
         System.out.println("----- STARTING SIMULATION -----");
         while (true) {
             gameBoard.print();
+            gameBoard.nextGeneration();
             System.out.println("\n+++++++++++++++++++++++++++++++++++++\n");
             try {
                 Thread.sleep(1000);
