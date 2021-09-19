@@ -8,10 +8,18 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         System.out.println("Hello world");
-        Board gameBoard = new Board(10, 10);
+        System.out.println("Please input the board size");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("rows: ");
+        int row = sc.nextInt();
+        System.out.print("cols: ");
+        int col = sc.nextInt();
+
+        Board gameBoard = new Board(row, col);
 
         // receive input from user
-        Scanner sc = new Scanner(System.in);
+
         int x = 0;
         int y = 0;
 
